@@ -1,0 +1,4 @@
+# extra packages used for code development
+black==24.4.2
+flake8==7.0.0
+pre-commit==3.7.1

@@ -1,0 +1,51 @@
+[tool.poetry]
+name = "pyarrow-pandas"
+version = "0.0.1"
+description = "utility to convert pyarrow tables into pandas dataframes"
+authors = ["Alex Polovinko <alex.polovinko@gmail.com>"]
+maintainers = ["Alex Polovinko <alex.polovinko@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/polovinko1980/pyarrow-pandas"
+repository = "https://github.com/polovinko1980/pyarrow-pandas"
+
+[tool.poetry.dependencies]
+python = "^3.9"
+pyarrow = "^18.1.0"
+pandas = "^2.2.3"
+
+[build-system]
+requires = ["setuptools", "wheel", "poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+
+[tool.black]
+line-length = 88
+skip-string-normalization = true
+exclude = '''
+/(
+    \.eggs
+  | \.git
+  | \.hg
+  | \.mypy_cache
+  | \.tox
+  | \.venv
+  | _build
+  | buck-out
+  | build
+  | dist
+)/
+'''
+
+[tool.ruff]
+select = ["E", "F", "I"]
+ignore = ["E501", "E402"] # line length
+src = ["src", "tasks"]
+exclude = [
+  "**/__pycache__",
+  ".venv",
+  "venv",
+  ".git",
+  "build",
+  "resources"
+]
