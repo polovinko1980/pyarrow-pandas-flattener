@@ -242,10 +242,6 @@ df = to_pandas_safe(flattened_table)
 
 - **`to_pandas_safe(table: pa.Table) -> pd.DataFrame`**: Converts a PyArrow table to a Pandas DataFrame with explicit type mapping to ensure compatibility.
 
-### Logging
-
-The module uses Python's built-in logging library to provide informative logs during the flattening process. The logs include the number of columns being flattened and performance metrics such as execution time and size of the resulting table.
-
 ### Example
 
 Here’s a complete example demonstrating the usage of the module:
@@ -272,9 +268,6 @@ df = to_pandas_safe(flattened_table)
 print(df)
 ```
 
-### Conclusion
-
-The `PyArrow Table Flattener` module is a powerful tool for data scientists and engineers working with complex data structures in PyArrow. By providing easy-to-use methods for flattening nested columns and converting to Pandas DataFrames, it streamlines data processing workflows and enhances data accessibility.
 
 ### License
 
